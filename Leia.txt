@@ -1,0 +1,63 @@
+Olá novamente, bom esse sistema funciona da seguinte forma, pelo gettime de acordo
+com a hora o tempo do dia mudará, se na vida real estiver de 18:00 horas o servidor
+estará de noite, tudo dependerá do dia, se na vida real estiver de dia no servidor também
+estará de dia, de manhã, de tarde, ou de noite.
+
+Caso você não queira usar esse sistema como um Filterscript, você podera adaptar em seu
+Gamemode da seguinte forma ▼
+
+public OnGamemodeInit()
+{
+    SetTimer("UpdateWorldTime", 1000, true);
+	return 1;
+}
+
+Se seu Gamemode tiver uma define de CallBack como está no arquivo "Hora Real.pwn".
+
+Exemplo ▼
+
+#define Funcao::%0(%1) 		forward %0(%1);\
+							public %0(%1)
+
+Você vai somente adicionar a CallBack assim ▼
+
+Funcao::UpdateWorldTime()
+{
+    new hour, minute, second;
+	gettime(hour, minute, second);
+	switch(hour)
+   	{
+  		case 0..4: SetWorldTime(3);
+		case 5..10: SetWorldTime(7);
+		case 11..15: SetWorldTime(12);
+		case 16..17: SetWorldTime(20);
+		case 18..23: SetWorldTime(0);
+	}
+	return 1;
+}
+
+Não vai precisar do forward já que ele está na define.
+
+Mas caso você não tenha isso você ira precisar usar o forward, exemplo ▼
+
+forward UpdateWorldTime();
+public UpdateWorldTime()
+{
+    new hour, minute, second;
+	gettime(hour, minute, second);
+	switch(hour)
+   	{
+  		case 0..4: SetWorldTime(3);
+		case 5..10: SetWorldTime(7);
+		case 11..15: SetWorldTime(12);
+		case 16..17: SetWorldTime(20);
+	    case 18..23: SetWorldTime(0);
+	}
+	return 1;
+}
+
+Lembre-se de adicionar o SetTimer no OnGamemodeInit, se você não adicioná-lo,
+não vai funcionar.
+
+Atenciosamente, Walkerxinho7
+Discord, Walkerxinho7#9124 caso precise de ajuda
