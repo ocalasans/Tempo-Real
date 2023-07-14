@@ -1,7 +1,7 @@
 Olá novamente, bom esse sistema funciona da seguinte forma, pelo gettime de acordo
-com a hora o tempo do dia mudará, se na vida real estiver de 18:00 horas o servidor
-estará de noite, tudo dependerá do dia, se na vida real estiver de dia no servidor também
-estará de dia, de manhã, de tarde, ou de noite.
+com a hora o tempo do dia mudará, se na vida real estiver 18:00 horas o servidor
+estará de noite, tudo dependerá do dia, se na vida real estiver de dia no servidor
+também estará de dia, de manhã, de tarde, ou de noite.
 
 Caso você não queira usar esse sistema como um Filterscript, você podera adaptar em seu
 Gamemode da seguinte forma ▼
