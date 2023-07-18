@@ -38,7 +38,9 @@ Funcao::UpdateWorldTime()
 
 Não vai precisar do forward já que ele está na define.
 
-Mas caso você não tenha isso você ira precisar usar o forward, exemplo ▼
+Mas caso você não tenha isso você ira precisar usar o forward.
+
+Exemplo ▼
 
 forward UpdateWorldTime();
 public UpdateWorldTime()
