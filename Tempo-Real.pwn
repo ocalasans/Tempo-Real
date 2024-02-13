@@ -1,7 +1,7 @@
 /*
     * Filterscript Tempo Real
 
-    © [2024] [Calasans]. Todos os direitos reservados.
+    � [2024] [Calasans]. Todos os direitos reservados.
 
     Discord: ocalasans
     Youtube: Calasans
@@ -10,6 +10,8 @@
     SA:MP Programming Comunnity©: https://abre.ai/samp-spc
 */
 
+#define FILTERSCRIPT
+//
 #include <a_samp>
 //
 public OnFilterScriptInit()
